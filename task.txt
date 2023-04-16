@@ -1,0 +1,14 @@
+Need to fix source code in the way to get it compiles, links and have following output as execution result:
+
+started
+action `one' is in process...
+stopped
+started
+action `two' is in process...
+stopped
+the `Chicken and Egg' dilemma is solved!
+myCat says `miaow', gnows everything and has 9 lifes
+myDog says `bow-wow', gnows nothing and has 1 lifes
+
+
+It is not allowed to remove whole entities (functions, classes).
