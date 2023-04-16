@@ -1,5 +1,5 @@
 #ifndef CAT_H
-#define PET_H
+#define CAT_H
 
 class Cat : Pet
 {
