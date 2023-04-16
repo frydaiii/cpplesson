@@ -1,9 +1,9 @@
 #include "12.hh"
 #include "Zoo.hh"
 
-enum Type {
-	Person,
-	Animal
+enum Type { // rename to avoid conflict
+	PersonType,
+	AnimalType
 };
 
 struct Animal;
@@ -20,8 +20,8 @@ void pets( bool flag = true );
 
 int main( int argc )
 {
-	Type type = argc ? Person : Animal;
-	if( Person == type )
+	Type type = argc ? PersonType : AnimalType;
+	if( PersonType == type )
 		Person fry = { "Fry" , 26 };
 
 	hard_work();
@@ -31,7 +31,7 @@ int main( int argc )
 
 void hard_work()
 {
-	extern int GoodWork = 0x77;
+	int GoodWork = 0x77; // drop extern keyword
 	prepare_one();
 	work_one();
 	GoodWork = 0xEE;

@@ -1,7 +1,7 @@
 #ifndef DOG_H
 #define DOG_H
 
-class Dog : Pet
+class Dog : public Pet // change to public inheritance
 {
 public:
 	virtual const char * say() { return "bow-wow" ; }
