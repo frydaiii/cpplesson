@@ -5,10 +5,6 @@ class Egg;
 class Chicken {
 public:
 	Egg * creator;
-	Egg getCreator()
-	{
-		if (!creator) exit(1);
-		return *creator;
-	}
+	Egg getCreator(); // only declaration
 };
 

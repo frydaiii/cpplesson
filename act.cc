@@ -1,6 +1,6 @@
 #include <cstdio>
 
-#include "act.cc"
+// #include "act.cc" // this line includes the code from itself
 
 void act( const char * action )
 {
