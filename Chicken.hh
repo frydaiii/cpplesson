@@ -1,3 +1,6 @@
+// #ifndef CHICKEN_H
+// #define CHICKEN_H
+
 #include <cstdlib>
 
 class Egg;
@@ -8,3 +11,4 @@ public:
 	Egg getCreator(); // only declaration
 };
 
+// #endif//CHICKEN_H

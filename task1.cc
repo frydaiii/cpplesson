@@ -29,6 +29,7 @@ int main( int argc )
 	pets();
 }
 
+int GoodWork; // definition outside of function to get external linkage
 void hard_work()
 {
 	int GoodWork = 0x77; // drop extern keyword
@@ -43,8 +44,9 @@ void hard_work()
 
 void chicken_and_egg()
 {
-	using Zoo::Chicken;
-	typedef Zoo::Egg Egg;
+	// using Zoo::Chicken;
+	// typedef Zoo::Egg Egg;
+	using namespace Zoo;
 	Chicken chicken;
 	Egg egg;
 	chicken.creator = &egg;
@@ -61,7 +63,7 @@ void chicken_and_egg()
 
 #include <cstdio>
 
-void pets()
+void pets(bool flag) // add param
 {
 	using namespace Zoo;
 	Cat cat;

@@ -1,8 +1,9 @@
 #include "start.hh"
 #include "stop.hh"
 #include "act.hh"
+#include "Worker.hh"
 
-bool prepared = false;
+extern bool prepared;
 
 void prepare_two()
 {

@@ -1,5 +1,6 @@
 #ifndef DOG_H
 #define DOG_H
+#include "Pet.hh"
 
 class Dog : public Pet // change to public inheritance
 {
