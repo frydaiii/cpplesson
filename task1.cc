@@ -45,7 +45,6 @@ void chicken_and_egg()
 {
 	using Zoo::Chicken;
 	typedef Zoo::Egg Egg;
-	using namespace Zoo;
 	Chicken chicken;
 	Egg egg;
 	chicken.creator = &egg;
