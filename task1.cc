@@ -29,10 +29,9 @@ int main( int argc )
 	pets();
 }
 
-int GoodWork; // definition outside of function to get external linkage
+int GoodWork = 0x77; // definition outside of function to get external linkage
 void hard_work()
 {
-	int GoodWork = 0x77; // drop extern keyword
 	prepare_one();
 	work_one();
 	GoodWork = 0xEE;
@@ -72,6 +71,6 @@ void pets(bool flag) // add param
 	Pet & myDog( dog );
 	printf( "myCat says `%s', gnows %sthing and has %d lifes\n" ,
 		myCat.say() , myCat.gnaw() ? "no" : "every" , myCat.lifes() );
-	printf( "myDog says `%s', gnows %sthing and has %d lifes/n" ,
+	printf( "myDog says `%s', gnows %sthing and has %d lifes\n" ,
 		myDog.say() , myDog.gnaw() ? "no" : "every" , myDog.lifes() );
 }
