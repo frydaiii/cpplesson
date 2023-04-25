@@ -1,9 +1,9 @@
 #include "12.hh"
 #include "Zoo.hh"
 
-enum Type {
-	Person,
-	Animal
+enum Type { // rename to avoid conflict
+	PersonType,
+	AnimalType
 };
 
 struct Animal;
@@ -20,8 +20,8 @@ void pets( bool flag = true );
 
 int main( int argc )
 {
-	Type type = argc ? Person : Animal;
-	if( Person == type )
+	Type type = argc ? PersonType : AnimalType;
+	if( PersonType == type )
 		Person fry = { "Fry" , 26 };
 
 	hard_work();
@@ -29,9 +29,9 @@ int main( int argc )
 	pets();
 }
 
+int GoodWork = 0x77; // definition outside of function to get external linkage
 void hard_work()
 {
-	extern int GoodWork = 0x77;
 	prepare_one();
 	work_one();
 	GoodWork = 0xEE;
@@ -61,7 +61,7 @@ void chicken_and_egg()
 
 #include <cstdio>
 
-void pets()
+void pets(bool flag) // add param
 {
 	using namespace Zoo;
 	Cat cat;
@@ -70,6 +70,6 @@ void pets()
 	Pet & myDog( dog );
 	printf( "myCat says `%s', gnows %sthing and has %d lifes\n" ,
 		myCat.say() , myCat.gnaw() ? "no" : "every" , myCat.lifes() );
-	printf( "myDog says `%s', gnows %sthing and has %d lifes/n" ,
+	printf( "myDog says `%s', gnows %sthing and has %d lifes\n" ,
 		myDog.say() , myDog.gnaw() ? "no" : "every" , myDog.lifes() );
 }

@@ -1,7 +1,7 @@
 #ifndef STRINGS_H
 #define STRINGS_H
 
-const char * Started = "started";
-const char * Stopped = "stopped";
+extern const char * Started;
+extern const char * Stopped;
 
 #endif//STRINGS_H

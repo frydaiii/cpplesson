@@ -1,3 +1,6 @@
+#ifndef EGG_H
+#define EGG_H
+
 #include <cstdlib>
 
 class Chicken;
@@ -5,9 +8,7 @@ class Chicken;
 class Egg {
 public:
 	Chicken * creator;
-	Chicken getCreator()
-	{
-		if (!creator) exit(1);
-		return *creator;
-	}
+	Chicken getCreator(); // only declaration
 };
+
+#endif//EGG_H

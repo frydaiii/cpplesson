@@ -1,6 +1,6 @@
 #include <cstdio>
 
-#include "act.cc"
+#include "act.hh" 
 
 void act( const char * action )
 {
